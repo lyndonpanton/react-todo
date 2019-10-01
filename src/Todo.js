@@ -6,10 +6,19 @@ class Todo extends React.Component {
 	}
 
 	render() {
-		return (
-			<div className="todo">
+		const todos = this.props.todos.map((key, index) => {
+			return (
+				<li key={index} className="todo">
+					{ this.props.todos[index].value }
+				</li>
+			);
+		});
 
-			</div>
+		return (
+
+			<ul className="todos">
+				{ todos }
+			</ul>
 		);
 	}
 }
