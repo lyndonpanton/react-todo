@@ -8,10 +8,16 @@ class Input extends React.Component {
 		}
 	}
 
+	handleInput = (event) => {
+		this.setState({
+			text: event.target.value
+		});
+	}
+
 	render() {
 		return (
 			<div className="input">
-				<input id="todo" type="text" name="todo" value={this.state.text} />
+				<input id="todo" type="text" name="todo" onChange={(event) => this.handleInput(event)} />
 
 			</div>
 		);
