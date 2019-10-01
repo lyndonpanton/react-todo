@@ -12,11 +12,20 @@ class App extends React.Component {
 		};
 	}
 
+	handleSubmit = (event) => {
+		const todos = this.state.todos;
+		this.setState({
+			todos: todos.concat({
+				value: event.target.value
+			})
+		});
+	}
+
 	render() {
 		return (
 			<div className="app">
 				<h1>Hello React</h1>
-				<Input />
+				<Input handleSubmit={(event) => this.handleSubmit(event)} />
 				<Todo todos={this.state.todos} />
 			</div>
 		);
