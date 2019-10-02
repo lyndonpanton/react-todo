@@ -9,7 +9,8 @@ class Todo extends React.Component {
 		const todos = this.props.todos.map((key, index) => {
 			return (
 				<li key={index} className="todo">
-					{ this.props.todos[index].value }
+					<span className="todo-value">{ this.props.todos[index].value }</span>
+					<span className="todo-cross"></span>
 				</li>
 			);
 		});
