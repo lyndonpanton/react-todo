@@ -15,7 +15,7 @@ class App extends React.Component {
 	handleSubmit = (event) => {
 		if (event.keyCode === 13 && event.target.value !== "") {
 			const todos = this.state.todos;
-			
+
 			this.setState({
 				todos: todos.concat({
 					value: event.target.value
@@ -24,12 +24,16 @@ class App extends React.Component {
 		}
 	}
 
+	removeTodo = (index) => {
+		
+	}
+
 	render() {
 		return (
 			<div className="app">
 				<h1>Hello React</h1>
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
-				<Todo todos={this.state.todos} />
+				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} />
 			</div>
 		);
 	}
