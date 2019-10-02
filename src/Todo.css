@@ -3,8 +3,8 @@
 }
 
 .checked {
-	opacity: 0.5;
 	text-decoration: line-through;
+	color: #CACACA;
 }
 
 .cross {
