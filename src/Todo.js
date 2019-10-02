@@ -10,7 +10,10 @@ class Todo extends React.Component {
 			return (
 				<li key={index} className="todo">
 					<span className="todo-value">{ this.props.todos[index].value }</span>
-					<span className="todo-cross"></span>
+					<div className="cross">
+						<div className="cross-left"></div>
+						<div className="cross-right"></div>
+					</div>
 				</li>
 			);
 		});
