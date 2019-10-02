@@ -13,12 +13,15 @@ class App extends React.Component {
 	}
 
 	handleSubmit = (event) => {
-		const todos = this.state.todos;
-		this.setState({
-			todos: todos.concat({
-				value: event.target.value
-			})
-		});
+		if (event.keyCode === 13) {
+			const todos = this.state.todos;
+			
+			this.setState({
+				todos: todos.concat({
+					value: event.target.value
+				})
+			});
+		}
 	}
 
 	render() {
