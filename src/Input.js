@@ -1,4 +1,5 @@
 import React from "react";
+import Plus from "./Plus";
 
 class Input extends React.Component {
 	constructor(props) {
@@ -18,7 +19,7 @@ class Input extends React.Component {
 		return (
 			<div className="input">
 				<input id="todo" type="text" name="todo" onChange={(event) => this.handleInput(event)} />
-
+				<Plus />
 			</div>
 		);
 	}
