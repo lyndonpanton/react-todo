@@ -13,7 +13,7 @@ class App extends React.Component {
 	}
 
 	handleSubmit = (event) => {
-		if (event.keyCode === 13) {
+		if (event.keyCode === 13 && event.target.value !== "") {
 			const todos = this.state.todos;
 			
 			this.setState({
