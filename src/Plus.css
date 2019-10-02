@@ -1,0 +1,28 @@
+.circle {
+	position: relative;
+
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: #CCCCCC;
+}
+
+.plus-h {
+	position: absolute;
+	top: 43%;
+	left: 22%;
+
+	width: 13px;
+	height: 3px;
+	background-color: #FFFFFF
+}
+
+.plus-v {
+	position: absolute;
+	top: 22%;
+	left: 43%;
+
+	width: 3px;
+	height: 13px;
+	background-color: #FFFFFF
+}
