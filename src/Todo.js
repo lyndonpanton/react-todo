@@ -10,7 +10,7 @@ class Todo extends React.Component {
 			return (
 				<li key={index} className="todo">
 					<span className="todo-value">{ this.props.todos[index].value }</span>
-					<div className="cross" onClick={this.props.handleClick} >
+					<div className="cross" onClick={(event) => this.props.handleClick(index)} >
 						<div className="cross-left"></div>
 						<div className="cross-right"></div>
 					</div>
