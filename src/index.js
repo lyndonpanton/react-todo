@@ -4,6 +4,7 @@ import App from "./App";
 import "./primitive.css";
 import "./Plus.css";
 import "./Input.css";
+import "./Todo.css";
 
 ReactDOM.render(
 	<App />,
