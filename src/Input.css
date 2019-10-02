@@ -1,0 +1,17 @@
+.input {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+	border: #9A9A9A solid 1px;
+	border-radius: 30px;
+}
+
+#todo {
+	margin-top: 8px;
+	border: none;
+	border-radius: 30px;
+	height: 100%;
+	width: 90%;
+}
