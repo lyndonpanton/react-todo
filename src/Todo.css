@@ -2,6 +2,11 @@
 	margin-right: 10px;
 }
 
+.checked {
+	opacity: 0.5;
+	text-decoration: line-through;
+}
+
 .cross {
 	position: relative;
 
