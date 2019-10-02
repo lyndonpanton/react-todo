@@ -28,3 +28,27 @@
 	height: 65%;
 	background-color: #FFFFFF
 }
+
+.todo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	border-right: #DADADA solid 2px;
+	border-bottom: #DADADA solid 2px;
+	border-left: #DADADA solid 2px;
+	border-collapse: collapse;
+	border-radius: 5px;
+	padding: 8px 10px;
+}
+
+.todo:first-child {
+	border-top: #DADADA solid 2px;
+}
+
+.todos {
+	margin: 0;
+	padding: 4px 60px;
+	list-style-type: none;
+}
