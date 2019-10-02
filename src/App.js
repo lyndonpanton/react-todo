@@ -12,6 +12,10 @@ class App extends React.Component {
 		};
 	}
 
+	checkTodo = (event, index) => {
+		event.target.parentElement.classList.toggle("checked");
+	}
+
 	handleSubmit = (event) => {
 		if (event.keyCode === 13 && event.target.value !== "") {
 			const todos = this.state.todos;
@@ -39,7 +43,7 @@ class App extends React.Component {
 			<div className="app">
 				<h1>Hello React</h1>
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
-				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} />
+				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} checkTodo={(event, index) => this.checkTodo(event, index)} />
 			</div>
 		);
 	}
