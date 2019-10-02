@@ -5,7 +5,7 @@ class Button extends React.Component {
 		const type = this.props.type;
 
 		return (
-			<button onClick={(event) => this.props.clearCheck(event)}>{type}</button>
+			<button onClick={(event) => this.props.clearChecked(event)}>{type}</button>
 		);
 	}
 }
