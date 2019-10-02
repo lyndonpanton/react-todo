@@ -1,0 +1,30 @@
+.cross {
+	position: relative;
+
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: #FF0000;
+
+	transform: rotate(45deg);
+}
+
+.cross-left {
+	position: absolute;
+	top: 45%;
+	left: 20%;
+
+	width: 65%;
+	height: 15%;
+	background-color: #FFFFFF
+}
+
+.cross-right {
+	position: absolute;
+	top: 20%;
+	left: 45%;
+
+	width: 15%;
+	height: 65%;
+	background-color: #FFFFFF
+}
