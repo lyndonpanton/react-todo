@@ -25,7 +25,13 @@ class App extends React.Component {
 	}
 
 	removeTodo = (index) => {
-		
+		const todos = this.state.todos;
+
+		this.setState({
+			todos: todos.filter((todo, todoIndex) => {
+				return index !== todoIndex;
+			})
+		});
 	}
 
 	render() {
