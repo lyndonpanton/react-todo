@@ -9,6 +9,7 @@ class Todo extends React.Component {
 		const todos = this.props.todos.map((key, index) => {
 			return (
 				<li key={index} className="todo">
+					<input className="check" type="checkbox" name={"check-" + index} />
 					<span className="todo-value">{ this.props.todos[index].value }</span>
 					<div className="cross" onClick={(event) => this.props.handleClick(index)} >
 						<div className="cross-left"></div>
