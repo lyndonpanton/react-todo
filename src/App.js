@@ -22,7 +22,8 @@ class App extends React.Component {
 
 			this.setState({
 				todos: todos.concat({
-					value: event.target.value
+					value: event.target.value,
+					checked: false
 				})
 			});
 		}
