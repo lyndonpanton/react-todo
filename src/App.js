@@ -14,6 +14,20 @@ class App extends React.Component {
 
 	checkTodo = (event, index) => {
 		event.target.parentElement.classList.toggle("checked");
+		const todos = this.state.todos.map((todo, todoIndex) => {
+			if (index !== todoIndex) {
+				return todo;
+			} else {
+				return {
+					value: todo.value,
+					checked: !todo.checked
+				}
+			}
+		});
+
+		this.setState({
+			todos: todos
+		});
 	}
 
 	handleSubmit = (event) => {
