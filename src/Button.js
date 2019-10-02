@@ -1,11 +1,11 @@
 import React from "react";
 
-class Button extends React.Component {
+const Button = (props) => {
 	render() {
-		const type = this.props.type;
+		const type = props.type;
 
 		return (
-			<button onClick={(event) => this.props.clearChecked(event)}>{type}</button>
+			<button onClick={(event) => props.clearChecked(event)}>{type}</button>
 		);
 	}
 }
