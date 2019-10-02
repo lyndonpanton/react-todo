@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./Input";
 import Todo from "./Todo";
+import Button from "./Button";
 
 class App extends React.Component {
 	constructor(props) {
@@ -23,6 +24,16 @@ class App extends React.Component {
 					checked: !todo.checked
 				}
 			}
+		});
+
+		this.setState({
+			todos: todos
+		});
+	}
+
+	clearChecked = (event, index) => {
+		const todos = this.state.todos.filter((todo) => {
+			return todo.checked !== true;
 		});
 
 		this.setState({
@@ -59,6 +70,7 @@ class App extends React.Component {
 				<h1>Hello React</h1>
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
 				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} checkTodo={(event, index) => this.checkTodo(event, index)} />
+				<Button type="Clear Checked" clearChecked={(event) => this.clearChecked(event)} />
 			</div>
 		);
 	}
