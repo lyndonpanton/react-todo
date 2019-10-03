@@ -1,4 +1,4 @@
-## React Todo
+# React Todo
 
 ## How To Open
 > 1. Install node globally
