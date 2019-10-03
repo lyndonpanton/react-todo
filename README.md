@@ -1,3 +1,23 @@
+## React Todo
+
+## How To Open
+> 1. Install node globally
+> 2. Go to application download folder in terminal
+> 3. Run _npm start_
+> 4. View code at _localhost:3000_
+
+## How To Use
+> 1. Type todo into text box add press enter to add todo
+> 2. Press cross icon to delete todo
+> 3. Press checkbox to cross out a todo
+
+## Requirements
+> 1. This project requires a browser to run
+> 2. The browser must have JavaScript available and enabled
+
+## Errors
+> 1. _Clear Checked_ button also toggling crossed out state of todos
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
