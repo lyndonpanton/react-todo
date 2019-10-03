@@ -31,10 +31,17 @@ class App extends React.Component {
 		});
 	}
 
-	clearChecked = (event, index) => {
-		const todos = this.state.todos.filter((todo) => {
-			return todo.checked !== true;
+	clearChecked = (event) => {
+		const filtered = this.state.todos.filter((todo) => {
+			return todo.checked === false;
 		});
+
+		const todos = filtered.map((todo) => {
+			return {
+				value: todo.value,
+				checked: false
+			};
+		})
 
 		this.setState({
 			todos: todos
