@@ -18,6 +18,12 @@
 ## Errors
 > 1. _Clear Checked_ button also toggling crossed out state of todos
 
+## User Stories
+> 1. Used React
+> 2. Handled and passed props and state
+> 3. Used multiple components
+> 4. Used mixture of stateless, stateful components
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
