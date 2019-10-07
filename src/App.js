@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import Input from "./Input";
 import Todo from "./Todo";
 import Button from "./Button";
@@ -74,7 +75,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="app">
-				<h1>Hello React</h1>
+				<Header />
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
 				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} checkTodo={(event, index) => this.checkTodo(event, index)} />
 				<Button type="Clear Checked" clearChecked={(event) => this.clearChecked(event)} />
