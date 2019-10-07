@@ -3,6 +3,7 @@ import Header from "./Header";
 import Input from "./Input";
 import Todo from "./Todo";
 import Button from "./Button";
+import "./App.css";
 
 class App extends React.Component {
 	constructor(props) {
