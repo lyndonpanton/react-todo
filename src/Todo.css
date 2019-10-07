@@ -51,6 +51,7 @@
 	border-collapse: collapse;
 	border-radius: 5px;
 	padding: 8px 10px;
+	text-align: center;
 }
 
 .todo:first-child {
@@ -58,7 +59,6 @@
 }
 
 .todos {
-	margin: 20px 0 0 0;
-	padding: 4px 60px;
 	list-style-type: none;
+	padding: 0;
 }
