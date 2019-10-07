@@ -8,7 +8,7 @@ const Button = (props) => {
 	};
 
 	return (
-		<button style={styles} onClick={(event) => props.clearChecked(event)}>{type}</button>
+		<button style={styles} onClick={(event) => props.handleClick(event)}>{type}</button>
 	);
 }
 
