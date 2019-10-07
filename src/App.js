@@ -15,19 +15,6 @@ class App extends React.Component {
 		};
 	}
 
-	checkAll = (event) => {
-		const marked = this.state.todos.map((todo, index) => {
-			return {
-				value: todo.value,
-				checked: true
-			};
-		});
-
-		this.setState({
-			todos: marked
-		});
-	}
-
 	checkTodo = (event, index) => {
 		event.target.parentElement.classList.toggle("checked");
 		const todos = this.state.todos.map((todo, todoIndex) => {
@@ -76,6 +63,19 @@ class App extends React.Component {
 		}
 	}
 
+	markAll = (event) => {
+		const marked = this.state.todos.map((todo, index) => {
+			return {
+				value: todo.value,
+				checked: true
+			};
+		});
+
+		this.setState({
+			todos: marked
+		});
+	}
+
 	removeTodo = (index) => {
 		const todos = this.state.todos;
 
@@ -93,7 +93,7 @@ class App extends React.Component {
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
 				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} checkTodo={(event, index) => this.checkTodo(event, index)} />
 				<Button type="Clear Marked" handleClick={(event) => this.clearMarked(event)} />
-				<Button type="Mark All" handleClick={(event) => this.checkAll(event)} />
+				<Button type="Mark All" handleClick={(event) => this.markAll(event)} />
 			</div>
 		);
 	}
