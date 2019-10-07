@@ -18,7 +18,7 @@ class Input extends React.Component {
 	render() {
 		return (
 			<div className="input" onKeyUp={(event) => this.props.handleSubmit(event)}>
-				<input id="todo" type="text" name="todo" onChange={(event) => this.handleInput(event)} />
+				<input id="todo" type="text" name="todo" placeholder="Add todo..." onChange={(event) => this.handleInput(event)} />
 				<Plus />
 			</div>
 		);
