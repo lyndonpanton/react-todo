@@ -12,7 +12,8 @@
 	border: none;
 	border-radius: 30px;
 	height: 100%;
-	width: 90%;
+	width: 100%;
 	padding-right: 11%;
+	padding-left: 11%;
 	text-align: center;
 }
