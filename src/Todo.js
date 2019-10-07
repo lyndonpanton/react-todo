@@ -6,12 +6,22 @@ class Todo extends React.Component {
 	}
 
 	render() {
+		const marked = this.props.todos.checked ? 
+			{
+				textDecoration: "line-through",
+				color: "#CACACA"
+			} : 
+			{
+				textDecoration: "none",
+				color: "#000000"
+			};
+
 		const todos = this.props.todos.map((key, index) => {
 			return (
-				<li key={index} className="todo">
+				<li key={index} className="todo" style={marked}>
 					<input className="check" type="checkbox" name={"check-" + index} onClick={(event) => this.props.checkTodo(event, index)} />
 					<span className="todo-value">{ this.props.todos[index].value }</span>
-					<div className="cross" onClick={(event) => this.props.handleClick(index)} >
+					<div className="cross" onClick={(event) => this.props.handlePress(index)} tabIndex="0">
 						<div className="cross-left"></div>
 						<div className="cross-right"></div>
 					</div>
