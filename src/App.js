@@ -46,7 +46,7 @@ class App extends React.Component {
 		});
 	}
 
-	clearChecked = (event) => {
+	clearMarked = (event) => {
 		const filtered = this.state.todos.filter((todo) => {
 			return todo.checked === false;
 		});
@@ -92,7 +92,7 @@ class App extends React.Component {
 				<Header />
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
 				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} checkTodo={(event, index) => this.checkTodo(event, index)} />
-				<Button type="Clear Checked" handleClick={(event) => this.clearChecked(event)} />
+				<Button type="Clear Marked" handleClick={(event) => this.clearMarked(event)} />
 				<Button type="Mark All" handleClick={(event) => this.checkAll(event)} />
 			</div>
 		);
