@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Input from "./Input";
 import Todo from "./Todo";
-import Button from "./Button";
+// import Button from "./Button";
 import "./App.css";
 
 class App extends React.Component {
@@ -91,9 +91,9 @@ class App extends React.Component {
 			<div className="app">
 				<Header />
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
-				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} checkTodo={(event, index) => this.checkTodo(event, index)} />
-				<Button type="Clear Marked" handleClick={(event) => this.clearMarked(event)} />
-				<Button type="Mark All" handleClick={(event) => this.markAll(event)} />
+				<Todo todos={this.state.todos} handlePress={this.removeTodo} checkTodo={(event, index) => this.checkTodo(event, index)} />
+				{/* <Button type="Clear Marked" handleClick={(event) => this.clearMarked(event)} /> */}
+				{/* <Button type="Mark All" handleClick={(event) => this.markAll(event)} /> */}
 			</div>
 		);
 	}
