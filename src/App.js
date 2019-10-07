@@ -80,6 +80,7 @@ class App extends React.Component {
 				<Input handleSubmit={(event) => this.handleSubmit(event)} />
 				<Todo todos={this.state.todos} handleClick={(event) => this.removeTodo(event)} checkTodo={(event, index) => this.checkTodo(event, index)} />
 				<Button type="Clear Checked" clearChecked={(event) => this.clearChecked(event)} />
+				<Button type="Mark All" clearChecked={(event) => this.markAll(event)} />
 			</div>
 		);
 	}
