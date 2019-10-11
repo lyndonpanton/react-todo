@@ -102,7 +102,7 @@ class App extends React.Component {
 			<div className="app" style={appStyling}>
 				<Header name={this.state.name} />
 				<Form handleSubmit={this.handleSubmit} />
-				<Buttons deleteAll={this.deleteAll} deleteMarked={this.deleteMarked} markAll={this.markAll} />
+				<Buttons deleteAll={this.deleteAll} deleteMarked={this.deleteMarked} markAll={this.markAll} unMarkAll={this.unMarkAll} />
 				<Todo todos={this.state.todos} handleCheck={this.handleCheck} handleDelete={this.handleDelete} />
 			</div>
 		);
