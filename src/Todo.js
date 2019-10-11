@@ -1,10 +1,6 @@
 import React from "react";
 
 class Todo extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 
 		const todos = this.props.todos.map((key, index) => {
