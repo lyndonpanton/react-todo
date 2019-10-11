@@ -68,7 +68,16 @@ class App extends React.Component {
 	};
 
 	markAll = () => {
+		const todos = this.state.todos.map((todo, index) => {
+			return {
+				value: todo.value,
+				checked: true
+			}
+		});
 
+		this.setState({
+			todos: todos
+		});
 	}
 
 	render() {
