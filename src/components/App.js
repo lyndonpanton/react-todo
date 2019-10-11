@@ -81,7 +81,7 @@ class App extends React.Component {
 	};
 
 	unMarkAll = () => {
-		const todos = this.state.todo.map((todo, index) => {
+		const todos = this.state.todos.map((todo, index) => {
 			return {
 				value: todo.value,
 				checked: false
