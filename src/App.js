@@ -51,16 +51,14 @@ class App extends React.Component {
 	}
 
 	handleSubmit = (event) => {
-		if (event.keyCode === 13 && event.target.value !== "") {
-			const todos = this.state.todos;
+		const todos = this.state.todos;
 
-			this.setState({
-				todos: todos.concat({
-					value: event.target.value,
-					checked: false
-				})
-			});
-		}
+		this.setState({
+			todos: todos.concat({
+				value: event.target.value,
+				checked: false
+			})
+		});
 	}
 
 	markAll = (event) => {
