@@ -20,7 +20,13 @@ class App extends React.Component {
 	};
 
 	deleteMarked = () => {
+		const todos = this.state.todos.filter((todo, index) => {
+			return todo.checked === false;
+		});
 
+		this.setState({
+			todos: todos
+		});
 	};
 
 	handleCheck = (index) => {
