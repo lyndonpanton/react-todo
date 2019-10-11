@@ -6,19 +6,29 @@ class Input extends React.Component {
 		super(props);
 		this.state = {
 			text: ""
-		}
-	}
+		};
+	};
 
 	handleInput = (event) => {
 		this.setState({
 			text: event.target.value
 		});
-	}
+	};
+
+	handleSubmit = (event) => {
+		if (event.keyCode === 13 && event.target.value !== "") {
+			this.props.handleSubmit(event);
+
+			this.setState({
+				text: ""
+			});
+		}
+	};
 
 	render() {
 		return (
-			<div className="input" onKeyUp={(event) => this.props.handleSubmit(event)}>
-				<input id="todo" type="text" name="todo" placeholder="Add todo..." onChange={(event) => this.handleInput(event)} />
+			<div className="input" onKeyUp={(event) => this.handleSubmit(event)}>
+				<input id="todo" type="text" name="todo" value={this.state.text} placeholder="Add todo..." onChange={this.handleInput} />
 				<Plus />
 			</div>
 		);
