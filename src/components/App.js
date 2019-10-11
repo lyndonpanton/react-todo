@@ -87,6 +87,10 @@ class App extends React.Component {
 				checked: false
 			};
 		});
+
+		this.setState({
+			todos: todos
+		});
 	};
 
 	render() {
