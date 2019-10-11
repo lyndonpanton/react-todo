@@ -11,9 +11,9 @@ class Buttons extends React.Component {
 
 		return (
 			<div style={divStyling}>
-				<Button type="Mark All" />
-				<Button type="Delete Marked" />
-				<Button type="Delete All" />
+				<Button type="Mark All" color="#AAFFAA" />
+				<Button type="Delete Marked" color="#AADDFF" />
+				<Button type="Delete All" color="#FFA500" />
 			</div>
 		);
 	}
