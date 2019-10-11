@@ -72,13 +72,22 @@ class App extends React.Component {
 			return {
 				value: todo.value,
 				checked: true
-			}
+			};
 		});
 
 		this.setState({
 			todos: todos
 		});
-	}
+	};
+
+	unMarkAll = () => {
+		const todos = this.state.todo.map((todo, index) => {
+			return {
+				value: todo.value,
+				checked: false
+			};
+		});
+	};
 
 	render() {
 		const appStyling = {
