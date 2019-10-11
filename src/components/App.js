@@ -45,8 +45,6 @@ class App extends React.Component {
 			checked: false
 		});
 
-		console.log(todos);
-
 		this.setState({
 			todos: todos
 		});
