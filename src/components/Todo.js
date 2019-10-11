@@ -3,12 +3,10 @@ import React from "react";
 class Todo extends React.Component {
 	handleCheck = (event, index) => {
 		this.props.handleCheck(index);
-		console.log(index);
 	}
 
 	handleDelete = (event, index) => {
 		this.props.handleDelete(index);
-		console.log(index);
 	}
 
 	render() {
