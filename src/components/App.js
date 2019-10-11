@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Form from "./Form";
 import Todo from "./Todo";
+import Buttons from "./Buttons";
 
 class App extends React.Component {
 	constructor(props) {
@@ -59,6 +60,7 @@ class App extends React.Component {
 			<div className="app" style={appStyling}>
 				<Header name={this.state.name} />
 				<Form handleSubmit={this.handleSubmit} />
+				<Buttons />
 				<Todo todos={this.state.todos} handleCheck={this.handleCheck} handleDelete={this.handleDelete} />
 			</div>
 		);
