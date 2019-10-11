@@ -13,6 +13,16 @@ class App extends React.Component {
 		};
 	};
 
+	deleteAll = () => {
+		this.setState({
+			todos: []
+		});
+	};
+
+	deleteMarked = () => {
+
+	};
+
 	handleCheck = (index) => {
 		const todos = this.state.todos.map((todo, todoIndex) => {
 			if (index !== todoIndex) {
@@ -50,6 +60,10 @@ class App extends React.Component {
 			todos: todos
 		});
 	};
+
+	markAll = () => {
+
+	}
 
 	render() {
 		const appStyling = {
