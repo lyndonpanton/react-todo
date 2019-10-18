@@ -3,6 +3,7 @@ import Header from "./Header";
 import Form from "./Form";
 import Todo from "./Todo";
 import Buttons from "./Buttons";
+import Footer from "./Footer";
 
 class App extends React.Component {
 	constructor(props) {
@@ -104,6 +105,7 @@ class App extends React.Component {
 				<Form handleSubmit={this.handleSubmit} />
 				<Buttons deleteAll={this.deleteAll} deleteMarked={this.deleteMarked} markAll={this.markAll} unMarkAll={this.unMarkAll} />
 				<Todo todos={this.state.todos} handleCheck={this.handleCheck} handleDelete={this.handleDelete} />
+				<Footer />
 			</div>
 		);
 	};
