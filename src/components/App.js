@@ -98,17 +98,19 @@ class App extends React.Component {
 	};
 
 	render() {
+		const { author, copyright, date, name, todos } = this.state;
+
 		const appStyling = {
 			fontFamily: "Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif"
 		};
 
 		return (
 			<div className="app" style={appStyling}>
-				<Header name={this.state.name} />
+				<Header name={name} />
 				<Form handleSubmit={this.handleSubmit} />
 				<Buttons deleteAll={this.deleteAll} deleteMarked={this.deleteMarked} markAll={this.markAll} unMarkAll={this.unMarkAll} />
-				<Todo todos={this.state.todos} handleCheck={this.handleCheck} handleDelete={this.handleDelete} />
-				<Footer />
+				<Todo todos={todos} handleCheck={this.handleCheck} handleDelete={this.handleDelete} />
+				<Footer author={author} copyright={copyright} date={date} />
 			</div>
 		);
 	};
